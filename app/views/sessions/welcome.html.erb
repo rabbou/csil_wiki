@@ -1,9 +1,21 @@
+<div class="topnav">
+  <a href="welcome">Home</a>
 
-  <h1 align="center" style="border:2px solid red">Welcome to CSIL-Wiki!</h1>
+  <% if logged_in? %>
+    <a href="meisterdoms">Meisterdoms</a>
+    <a href="webcheckout">WebCheckout</a>
+    <a href="/logout">Logout</a>
+  <%end%>
+
+  <% if not_logged_in? %>
+    <a href="/users">Sign Up</a>
+    <a href="/login">Login</a>
+  <%end%>
+</div>
+
+
+  <h1 align="center" style="border:2px solid red">Welcome to CSIL Wiki!</h1>
   <% if logged_in? %>
       <h1 align="center">You are Logged In</h1>
       <p align="center">Click <a href="meisterdoms">here</a> to view our meisterdoms</p>
   <%end%>
-    <%= button_to "Logout", '/logout', method: :get%>
-    <%= button_to "Login", '/login', method: :get%>
-    <%= button_to "Sign Up", '/users', method: :get%>

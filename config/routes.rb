@@ -6,6 +6,7 @@ Rails.application.routes.draw do
    post 'login', to: 'sessions#create'
    get 'welcome', to: 'sessions#welcome'
    get 'meisterdoms', to: 'sessions#meisterdoms'
+   get 'webcheckout', to: 'sessions#webcheckout'
    delete '/users.:id_from_path(.:format)' => 'users#destroy'
   match("Delete", { :controller => "pills", :action => "destroy", :via => "get"})
   match("/logout", { :controller => "sessions", :action => "logout", :via => "get"})

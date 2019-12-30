@@ -1,9 +1,6 @@
 
-  <h1 align="center" style="border:2px solid red">Welcome to CSIL-Wiki!</h1>
-  <% if logged_in? %>
-      <h1 align="center">You are Logged In</h1>
+  <h1 align="center" style="border:2px solid red">Meisterdoms!</h1>
       <p align="center">Click <a href="welcome">here</a> to go back to home</p>
-  <%end%>
     <%= button_to "Logout", '/logout', method: :get%>
     <%= button_to "Login", '/login', method: :get%>
     <%= button_to "Sign Up", '/users', method: :get%>
