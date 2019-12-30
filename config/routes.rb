@@ -5,31 +5,14 @@ Rails.application.routes.draw do
    get 'login', to: 'sessions#new'
    post 'login', to: 'sessions#create'
    get 'welcome', to: 'sessions#welcome'
-   delete '/pills.:id_from_path(.:format)' => 'pills#destroy'
+   get 'meisterdoms', to: 'sessions#meisterdoms'
    delete '/users.:id_from_path(.:format)' => 'users#destroy'
   match("Delete", { :controller => "pills", :action => "destroy", :via => "get"})
   match("/logout", { :controller => "sessions", :action => "logout", :via => "get"})
   match("/sign_up", { :controller => "users", :action => "registration_form", :via => "get" })
 
   match("/", { :controller => "users", :action => "index", :via => "get" })
-  # Routes for the Pill resource:
-
-
-  # CREATE
-  match("/insert_pill", { :controller => "pills", :action => "create", :via => "post"})
-          
-  # READ
-  match("/pills", { :controller => "pills", :action => "index", :via => "get"})
-  
-  match("/pills/:id_from_path", { :controller => "pills", :action => "show", :via => "get"})
-  
-  # UPDATE
-  
-  match("/modify_pill/:id_from_path", { :controller => "pills", :action => "update", :via => "post"})
-  
-  # DELETE
-  match("/pills/:id_from_path", { :controller => "pills", :action => "delete", :via => "get"})
-
+ 
   #------------------------------
 
   # Routes for the User resource:
