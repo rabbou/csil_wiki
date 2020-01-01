@@ -4,13 +4,15 @@
   <% if logged_in? %>
     <a href="meisterdoms">Meisterdoms</a>
     <a href="webcheckout">WebCheckout</a>
-    <a href="/logout">Logout</a>
+    <%= button_to "Logout", '/logout', method: :get%>
   <%end%>
 
   <% if not_logged_in? %>
-    <a href="/users">Sign Up</a>
-    <a href="/login">Login</a>
+    <%= button_to "Login", '/login', method: :get%>
+    <%= button_to "Sign Up", '/users', method: :get%>
   <%end%>
+  
+  
 </div>
 
 
