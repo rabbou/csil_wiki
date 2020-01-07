@@ -14,7 +14,16 @@
  */
 
 table, th, td {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: white;
   border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+#flufferpuff {
+  background-color: lightblue;
+  border: 2px solid black;
   border-collapse: collapse;
   padding: 5px;
 }

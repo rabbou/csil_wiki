@@ -1,5 +1,85 @@
 
   <h1 align="center" style="border:2px solid red">Meisterdoms!</h1>
+    <div id="flufferpuff">
+    <table style="width:100%">
+      <tr>
+        <th>Meisterdoms</th>
+        <th>Current Meisters</th> 
+        <th>Responsibilites</th>
+      </tr>
+      <tr>
+        <td>Activity Monitoring</td>
+        <td>Dawson, Jason, Yves, Ilan</td>
+        <td>Maintain and update lab monitoring services. Develop report formats with full user interface support. Provide nightly LabStats email. Currently uses Python, Django, Javascript, HTML/CSS.</td>
+      </tr>
+      <tr>
+        <td>Backups</td>
+        <td>Josh, Katherine, Yves, Ilan</td>
+        <td>Maintain backup/restore scripts to provide regular backups for all our software and data. Generate nightly reports of backup success.</td>
+      </tr>
+      <tr>
+        <td>Cleaning</td>
+        <td><i>Ronald</i>, Juni</td>
+        <td>Create quarterly cleaning schedule, set cleaning process, send cleaning reminder emails. Cleaning and Scheduling meisters must be the same as the two are heavily interconnected.</td>
+      </tr>
+      <tr>
+        <td>Imaging</td>
+        <td><i>Olivia</i>, Abdo, Praveen, <i>Ronald</i>, Yves, Ilan, Juni</td>
+        <td>Develop and maintain Mac Image Rev-ing on a daily basis. Solve software problems. Build new images for Mac OS changes. Currently uses Ansible, Jenkins, Bash, and Homebrew.</td>
+      </tr>
+      <tr>
+        <td>Inventory</td>
+        <td><i>Ruben</i>, Dawson, Jason, Josh, Jeremy</td>
+        <td>Keep track of all Lab hardware, update moves and changes as they happen. Develop reports for key reviews and new equipment accession. Manage resale process at all stages: documents, equipment prep, etc...</td>
+      </tr>
+      <tr>
+        <td>Kiosk</td>
+        <td><i>Emily</i>, Yves</td>
+        <td>Understand, maintain, and develop all software components and hardware devices (NUCs).</td>
+      </tr>
+      <tr>
+        <td>Logins & Security</td>
+        <td><i>Emily</i>, Katherine, Yves</td>
+        <td>Provide proper login scripts for LDAP and AD logins. Monitor security updates for all our servers and machine farm. Be alert to new vulnerabilities and changes in security requirements. Handle authentication certificates and SSH logins.</td>
+      </tr>
+      <tr>
+        <td>Printing</td>
+        <td>Ruben, Tony</td>
+        <td>Maintain printers and printing server. Update printing server when CSIL gets a new printer. Setup printing for certain special events (e.g. ICPC).</td>
+      </tr>
+      <tr>
+        <td>Scheduling</td>
+        <td>Ronald, Benjamin, Juni</td>
+        <td>Create quarterly work shift schedules. Maintain webint schedule. Cleaning and Scheduling meisters must be the same as the two are heavily interconnected.</td>
+      </tr>
+      <tr>
+        <td>Servers</td>
+        <td>Abdo, Yves, Eugenia</td>
+        <td>Learn and maintain all hardware server and software VM deployments.</td>
+      </tr>
+      <tr>
+        <td>Training</td>
+        <td>Olivia, Marj, Jeremy</td>
+        <td>Design, schedule, and conduct new tutor training and regular reviews for all tutor staff.</td>
+      </tr>
+      <tr>
+        <td>Web-int</td>
+        <td>Jason, Yves, Tony</td>
+        <td>Program internal web services. Learn Web-int software itself for maintenance, app support, and further development.</td>
+      </tr>
+      <tr>
+        <td>Website</td>
+        <td>Angela, Abdo, Praveen, Yves, Ilan, Tony</td>
+        <td>Develop and design CSIL website, maintaining site with updates in recent information and policies. Design and maintain laboratory schedule to be shown on kiosks and website. Primary languages/frameworks used are JavaScript, HTML/CSS, and Bootstrap.</td>
+      </tr>
+      <tr>
+        <td>Wiki</td>
+        <td>Tyler, Ruben</td>
+        <td>Create and update wiki entires. Hold meisters responsible for documenting their responsibilities.</td>
+      </tr>
+
+    </table>
+    </div>
       <p align="center">Click <a href="welcome">here</a> to go back to home</p>
     <%= button_to "Logout", '/logout', method: :get%>
     <%= button_to "Login", '/login', method: :get%>
