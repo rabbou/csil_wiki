@@ -1,21 +1,20 @@
 <div class="sidenav">
-  <a href="welcome">Home</a><br>
-
   <% if logged_in? %>
-    <a href="ActivityMonitoring">Activity Monitoring</a><br>
-    <a href="Backups">Backups</a><br>
-    <a href="Imaging">Imaging</a><br>
-    <a href="Inventory">Inventory</a><br>
-    <a href="Kiosk">Kiosk</a><br>
-    <a href="LoginsSecurity">Logins & Security</a><br>
-    <a href="Printing">Printing</a><br>
-    <a href="SchedulingCleaning">Scheduling/Cleaning</a><br>
-    <a href="Servers">Servers</a><br>
-    <a href="Training">Training</a><br>
-    <a href="Webint">Web-int</a><br>
-    <a href="Website">Website</a><br>
-    <a href="Wiki">Wiki</a><br>
     <%= button_to "Logout", '/logout', method: :get%>
+    &nbsp<a href="welcome">Home</a><br>
+    &nbsp<a href="ActivityMonitoring">Activity Monitoring</a><br>
+    &nbsp<a href="Backups">Backups</a><br>
+    &nbsp<a href="Imaging">Imaging</a><br>
+    &nbsp<a href="Inventory">Inventory</a><br>
+    &nbsp<a href="Kiosk">Kiosk</a><br>
+    &nbsp<a href="LoginsSecurity">Logins & Security</a><br>
+    &nbsp<a href="Printing">Printing</a><br>
+    &nbsp<a href="SchedulingCleaning">Scheduling/Cleaning</a><br>
+    &nbsp<a href="Servers">Servers</a><br>
+    &nbsp<a href="Training">Training</a><br>
+    &nbsp<a href="Webint">Web-int</a><br>
+    &nbsp<a href="Website">Website</a><br>
+    &nbsp<a href="Wiki">Wiki</a><br>
   <%end%>
 
   <% if not_logged_in? %>
@@ -27,6 +26,9 @@
 
   <h1 align="center" style="border:2px solid red">Welcome to CSIL Wiki!</h1>
   <% if logged_in? %>
-      <h1 align="center">You are Logged In</h1>
+      <p align="center">You are Logged In <br>
+      General Spheres of Knowledge
+      </p>
+      
       <p align="center">Click <a href="meisterdoms">here</a> to view our meisterdoms</p>
   <%end%>
