@@ -1,9 +1,20 @@
-<div class="topnav">
-  <a href="welcome">Home</a>
+<div class="sidenav">
+  <a href="welcome">Home</a><br>
 
   <% if logged_in? %>
-    <a href="meisterdoms">Meisterdoms</a>
-    <a href="webcheckout">WebCheckout</a>
+    <a href="ActivityMonitoring">Activity Monitoring</a><br>
+    <a href="Backups">Backups</a><br>
+    <a href="Imaging">Imaging</a><br>
+    <a href="Inventory">Inventory</a><br>
+    <a href="Kiosk">Kiosk</a><br>
+    <a href="LoginsSecurity">Logins & Security</a><br>
+    <a href="Printing">Printing</a><br>
+    <a href="SchedulingCleaning">Scheduling/Cleaning</a><br>
+    <a href="Servers">Servers</a><br>
+    <a href="Training">Training</a><br>
+    <a href="Webint">Web-int</a><br>
+    <a href="Website">Website</a><br>
+    <a href="Wiki">Wiki</a><br>
     <%= button_to "Logout", '/logout', method: :get%>
   <%end%>
 
