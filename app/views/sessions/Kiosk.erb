@@ -1,0 +1,20 @@
+<div class="topnav">
+  <a href="welcome">Home</a>
+
+  <% if logged_in? %>
+    <a href="meisterdoms">Meisterdoms</a>
+    <a href="webcheckout">WebCheckout</a>
+  <%end%>
+
+  <% if not_logged_in? %>
+    <%= button_to "Login", '/login', method: :get%>
+    <%= button_to "Sign Up", '/users', method: :get%>
+     <meta http-equiv="Refresh" content="0; url=https://3000-ad5d64ce-7d1c-477b-8c2c-cccc97921172.ws-us02.gitpod.io/" />
+  <%end%>
+</div>
+
+  <h1 align="center" style="border:2px solid red">Kiosk</h1>
+  <h2 align="left">Introduction to Kiosk</h2>
+  <p> Some information here. </p>
+  
+  <%= button_to "Logout", '/logout', method: :get%>
