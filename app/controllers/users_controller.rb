@@ -21,7 +21,6 @@ class UsersController < ApplicationController
     @user = User.new
     @user.email = params.fetch("email_from_query")
     @user.password = params.fetch("password_from_query")
-    @user.phone_number = params.fetch("phone_number_from_query")
     @user.role = "basic"
     session[:user_id] = @user.id 
 
