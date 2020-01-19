@@ -20,6 +20,7 @@ Rails.application.routes.draw do
    get 'Webint', to: 'sessions#Webint'
    get 'Website', to: 'sessions#Website'
    get 'Wiki', to: 'sessions#Wiki'
+   get 'test', to: 'sessions#test'
    delete '/users.:id_from_path(.:format)' => 'users#destroy'
   match("Delete", { :controller => "pills", :action => "destroy", :via => "get"})
   match("/logout", { :controller => "sessions", :action => "logout", :via => "get"})
