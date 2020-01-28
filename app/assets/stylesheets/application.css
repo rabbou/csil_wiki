@@ -40,7 +40,7 @@ table, th, td {
 
 .button_to {
   padding: 5px 5px;
-  font-size: 16px;
+  font-size: 30px;
   text-align: center;
 }
 
@@ -74,9 +74,14 @@ label {
   float:left;
 }
 
-html {font: 16px 'Open Sans Condensed', 'Roboto Condensed', Verdana, sans-serif;}
+.nav {
+color:black;
+}
+
+/*
+html {font: 14px 'Open Sans Condensed', 'Times New Roman', Verdana, sans-serif;}
 h1 {font-size: 2.25em;}
 h2 {font-size: 2em;}
 h3 {font-size: 1.75em;}
 h4 {font-size: 1.5em;}
-p {font-size: 1.25em;}
+p {font-size: 1.25em;}*/
