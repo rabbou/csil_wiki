@@ -2,7 +2,12 @@
   <% if logged_in? %>
     <%= button_to "Logout", '/logout', method: :get%>
     &nbsp<a href="welcome">Home</a><br>
-    <p>Meisterdoms</p>
+    <p id="meisterdomheader">Logistics</p>
+    &nbsp<a href="LabLogistics">Lab Logistics</a><br>
+    &nbsp<a href="TutorLogistics">Tutor Logistics</a><br>
+    &nbsp<a href="TutorialVideos">Tutorial Videos</a><br>
+
+    <p id="meisterdomheader">Meisterdoms</p>
     &nbsp<a href="ActivityMonitoring">Activity Monitoring</a><br>
     &nbsp<a href="Backups">Backups</a><br>
     &nbsp<a href="Imaging">Imaging</a><br>
