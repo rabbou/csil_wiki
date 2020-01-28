@@ -1,7 +1,8 @@
-<div class="sidenav">
+<div class="sidenav";>
   <% if logged_in? %>
     <%= button_to "Logout", '/logout', method: :get%>
     &nbsp<a href="welcome">Home</a><br>
+    <p>Meisterdoms</p>
     &nbsp<a href="ActivityMonitoring">Activity Monitoring</a><br>
     &nbsp<a href="Backups">Backups</a><br>
     &nbsp<a href="Imaging">Imaging</a><br>
@@ -9,7 +10,7 @@
     &nbsp<a href="Kiosk">Kiosk</a><br>
     &nbsp<a href="LoginsSecurity">Logins & Security</a><br>
     &nbsp<a href="Printing">Printing</a><br>
-    &nbsp<a href="SchedulingCleaning">Scheduling/Cleaning</a><br>
+    &nbsp<a href="SchedulingCleaning">Scheduling/Cleaning </a><br>
     &nbsp<a href="Servers">Servers</a><br>
     &nbsp<a href="Training">Training</a><br>
     &nbsp<a href="Webint">Web-int</a><br>
@@ -24,11 +25,11 @@
 </div>
 
 
-  <h1 align="center" style="border:2px solid red">Welcome to CSIL Wiki!</h1>
-  <% if logged_in? %>
-      <p align="center">You are Logged In <br>
-      General Spheres of Knowledge
-      </p>
-      
-      <p align="center">Click <a href="meisterdoms">here</a> to view our meisterdoms</p>
-  <%end%>
+<h1 align="center">Welcome to CSIL Wiki!</h1>
+<% if logged_in? %>
+    <p align="center">You are Logged In <br>
+    General Spheres of Knowledge
+    </p>
+    
+    <p align="center">Click <a href="meisterdoms">here</a> to view our meisterdoms</p>
+<%end%>
