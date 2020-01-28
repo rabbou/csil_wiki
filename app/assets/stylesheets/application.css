@@ -69,9 +69,8 @@ label {
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #add8e6; /* Black */
+  background-color: #add8e6; /* Light Blue */
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
   float:left;
 }
 
