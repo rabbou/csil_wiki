@@ -21,6 +21,8 @@ Rails.application.routes.draw do
    get 'Website', to: 'sessions#Website'
    get 'Wiki', to: 'sessions#Wiki'
    get 'test', to: 'sessions#test'
+   get 'test_markdown', to: 'sessions#test_markdown'
+   
    delete '/users.:id_from_path(.:format)' => 'users#destroy'
   match("Delete", { :controller => "pills", :action => "destroy", :via => "get"})
   match("/logout", { :controller => "sessions", :action => "logout", :via => "get"})
