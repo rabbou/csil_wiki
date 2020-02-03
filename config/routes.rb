@@ -1,4 +1,4 @@
-Rails.application.LoginsSecurity.draw do
+Rails.application.routes.draw do
 
    resources :users, only: [:new, :create]
    root to: 'sessions#welcome'
