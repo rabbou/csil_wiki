@@ -63,7 +63,7 @@ label {
 
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  max-width: 300px; /* Set the width of the sidebar */
+  max-width: 200px; /* Set the width of the sidebar */
   margin: auto;
   position: relative; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
@@ -375,9 +375,13 @@ table tr td
 .dropbtn {
   background-color: #000;
   color: white;
-  padding: 16px;
+  margin: 10px 0 0 10px;
+  padding: 9px 26px 6px 26px;
   font-size: 16px;
+  font: normal 100% arial, sans-serif;
+  text-transform: uppercase;
   border: none;
+  letter-spacing: 0.1em;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -396,6 +400,19 @@ table tr td
   z-index: 1;
 }
 
+/* 
+  
+  display: block; 
+  float: left; 
+  height: 17px;
+  margin: 10px 0 0 10px;
+  padding: 9px 26px 6px 26px;
+  text-align: center;
+  color: #FFF;
+  
+  text-decoration: none;
+  background: transparent; */
+
 /* Links inside the dropdown */
 .dropdown-content a {
   color: black;
@@ -411,4 +428,4 @@ table tr td
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #a9a9a9;}
+.dropdown:hover .dropbtn {background-color: #666666;}
