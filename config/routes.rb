@@ -4,7 +4,7 @@ Rails.application.routes.draw do
    root to: 'sessions#welcome'
    get 'login', to: 'sessions#new'
    post 'login', to: 'sessions#create'
-   get 'welcome', to: 'sessions#welcome'
+   get 'welcome', to: 'sessions#templatePage'
    get 'meisterdoms', to: 'sessions#meisterdoms'
    get 'webcheckout', to: 'sessions#webcheckout'
    get 'ActivityMonitoring', to: 'sessions#ActivityMonitoring'
