@@ -16,14 +16,16 @@
   <%end%>
 </head>
 
+<% if logged_in? %>
+
 <body>
   <div id="main">
     <div id="header">
       <div id="logo">
         <div id="logo_text">
           <!-- class="logo_colour", allows you to change the colour of the text -->
-          <h1 color='black'><a href="index.html">CSIL <span class="logo_colour">Wiki</span></a></h1>
-          <h2>By Katherine, Tyler and Ruben</h2>
+          <h1 color='black'><a href="index.html"><span class="logo_colour">CSIL Wiki</span></a></h1>
+          <h2 color='black'><span class="logo_colour">By Katherine, Tyler and Ruben</span></h2>
         </div>
       </div>
       <div id="menubar">
@@ -99,4 +101,6 @@
     </div>
   </div>
 </body>
+<%end%>
 </html>
+
