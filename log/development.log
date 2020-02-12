@@ -4020,3 +4020,257 @@ Processing by SessionsController#ActivityMonitoring as HTML
 Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.2ms | Allocations: 10258)
 
 
+Started GET "/" for ::1 at 2020-02-12 01:51:09 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 21.2ms | Allocations: 13395)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1485ms (Views: 1477.9ms | ActiveRecord: 1.2ms | Allocations: 1468004)
+
+
+Started GET "/Imaging" for ::1 at 2020-02-12 01:51:12 +0000
+Processing by SessionsController#Imaging as HTML
+  Rendering sessions/Imaging.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/Imaging.erb within layouts/application (Duration: 6.7ms | Allocations: 3792)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.3ms | Allocations: 10247)
+
+
+Started GET "/ActivityMonitoring" for ::1 at 2020-02-12 02:00:16 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#ActivityMonitoring as HTML
+  Rendering sessions/ActivityMonitoring.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/ActivityMonitoring.html.erb within layouts/application (Duration: 7.3ms | Allocations: 3821)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.3ms | Allocations: 11296)
+
+
+Started GET "/" for ::1 at 2020-02-12 02:04:10 +0000
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 8.4ms | Allocations: 5495)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /workspace/csil_wiki/public/packs
+Completed 200 OK in 3448ms (Views: 3445.3ms | ActiveRecord: 0.3ms | Allocations: 19036)
+
+
+Started GET "/ActivityMonitoring" for ::1 at 2020-02-12 02:04:15 +0000
+Processing by SessionsController#ActivityMonitoring as HTML
+  Rendering sessions/ActivityMonitoring.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/ActivityMonitoring.html.erb within layouts/application (Duration: 7.8ms | Allocations: 3814)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.4ms | Allocations: 10253)
+
+
+Started GET "/" for ::1 at 2020-02-12 02:08:05 +0000
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 8.5ms | Allocations: 5489)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.3ms | Allocations: 12892)
+
+
+Started GET "/ActivityMonitoring" for ::1 at 2020-02-12 02:08:07 +0000
+Processing by SessionsController#ActivityMonitoring as HTML
+  Rendering sessions/ActivityMonitoring.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/ActivityMonitoring.html.erb within layouts/application (Duration: 10.1ms | Allocations: 3808)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.3ms | Allocations: 10251)
+
+
+Started GET "/" for ::1 at 2020-02-12 02:09:41 +0000
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 15.2ms | Allocations: 5482)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 0.3ms | Allocations: 12902)
+
+
+Started GET "/ActivityMonitoring" for ::1 at 2020-02-12 02:09:44 +0000
+Processing by SessionsController#ActivityMonitoring as HTML
+  Rendering sessions/ActivityMonitoring.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/ActivityMonitoring.html.erb within layouts/application (Duration: 11.7ms | Allocations: 3809)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 27.2ms | ActiveRecord: 0.3ms | Allocations: 10240)
+
+
+Started GET "/" for ::1 at 2020-02-12 02:10:16 +0000
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 9.2ms | Allocations: 5504)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.3ms | Allocations: 12916)
+
+
+Started GET "/ActivityMonitoring" for ::1 at 2020-02-12 02:10:18 +0000
+Processing by SessionsController#ActivityMonitoring as HTML
+  Rendering sessions/ActivityMonitoring.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/ActivityMonitoring.html.erb within layouts/application (Duration: 8.2ms | Allocations: 3809)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.2ms | Allocations: 10250)
+
+
+Started GET "/" for ::1 at 2020-02-12 02:11:31 +0000
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 13.0ms | Allocations: 5176)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 21.9ms | ActiveRecord: 0.3ms | Allocations: 11490)
+
+
+Started GET "/" for ::1 at 2020-02-12 02:11:38 +0000
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 11.3ms | Allocations: 5153)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.2ms | Allocations: 11462)
+
+
+Started GET "/" for ::1 at 2020-02-12 02:11:53 +0000
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 11.5ms | Allocations: 5481)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.2ms | Allocations: 12885)
+
+
+Started GET "/" for ::1 at 2020-02-12 02:12:10 +0000
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 9.6ms | Allocations: 5482)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.2ms | Allocations: 12904)
+
+
+Started GET "/" for ::1 at 2020-02-12 02:12:27 +0000
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 15.5ms | Allocations: 5155)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.4ms | Allocations: 11485)
+
+
+Started GET "/ActivityMonitoring" for ::1 at 2020-02-12 02:12:57 +0000
+Processing by SessionsController#ActivityMonitoring as HTML
+  Rendering sessions/ActivityMonitoring.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/ActivityMonitoring.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3797)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.3ms | Allocations: 11244)
+
+
+Started GET "/" for ::1 at 2020-02-12 02:13:40 +0000
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 7.8ms | Allocations: 5481)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.2ms | Allocations: 12908)
+
+
+Started GET "/ActivityMonitoring" for ::1 at 2020-02-12 02:13:43 +0000
+Processing by SessionsController#ActivityMonitoring as HTML
+  Rendering sessions/ActivityMonitoring.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/ActivityMonitoring.html.erb within layouts/application (Duration: 7.6ms | Allocations: 3793)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.2ms | Allocations: 10236)
+
+
