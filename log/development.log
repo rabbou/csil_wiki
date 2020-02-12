@@ -3886,3 +3886,137 @@ Started GET "/style/style.css" for ::1 at 2020-02-12 01:33:16 +0000
   
 ActionController::RoutingError (No route matches [GET] "/style/style.css"):
   
+Started GET "/" for ::1 at 2020-02-12 01:43:05 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 22.7ms | Allocations: 13393)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2832ms (Views: 2824.3ms | ActiveRecord: 2.7ms | Allocations: 1560770)
+
+
+Started GET "/style/style.css" for ::1 at 2020-02-12 01:43:08 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/style/style.css"):
+  
+Started GET "/" for ::1 at 2020-02-12 01:43:08 +0000
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 14.2ms | Allocations: 5154)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.3ms | Allocations: 11504)
+
+
+Started GET "/style/style.css" for ::1 at 2020-02-12 01:43:08 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/style/style.css"):
+  
+Started GET "/ActivityMonitoring" for ::1 at 2020-02-12 01:43:14 +0000
+Processing by SessionsController#ActivityMonitoring as HTML
+  Rendering sessions/ActivityMonitoring.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/ActivityMonitoring.html.erb within layouts/application (Duration: 6.7ms | Allocations: 3802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.2ms | Allocations: 10282)
+
+
+Started GET "/style/style.css" for ::1 at 2020-02-12 01:43:14 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/style/style.css"):
+  
+Started GET "/" for ::1 at 2020-02-12 01:43:38 +0000
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 8.0ms | Allocations: 5167)
+Completed 500  in 15ms (ActiveRecord: 0.2ms | Allocations: 12794)
+
+
+
+Sprockets::Rails::Helper::AssetNotFound - The asset "application.css" is not present in the asset pipeline.:
+  app/views/layouts/application.html.erb:14
+
+Started POST "/__better_errors/0396e3a943db12bb/variables" for ::1 at 2020-02-12 01:43:38 +0000
+Started GET "/" for ::1 at 2020-02-12 01:44:02 +0000
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 8.7ms | Allocations: 5168)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.2ms | Allocations: 11499)
+
+
+Started GET "/style/style.css" for ::1 at 2020-02-12 01:44:02 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/style/style.css"):
+  
+Started GET "/" for ::1 at 2020-02-12 01:45:06 +0000
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 9.7ms | Allocations: 5481)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.3ms | Allocations: 12953)
+
+
+Started GET "/application.css" for ::1 at 2020-02-12 01:45:07 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/application.css"):
+  
+Started GET "/" for ::1 at 2020-02-12 01:45:33 +0000
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 7.3ms | Allocations: 5481)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.2ms | Allocations: 12912)
+
+
+Started GET "/ActivityMonitoring" for ::1 at 2020-02-12 01:45:43 +0000
+Processing by SessionsController#ActivityMonitoring as HTML
+  Rendering sessions/ActivityMonitoring.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/ActivityMonitoring.html.erb within layouts/application (Duration: 11.7ms | Allocations: 3791)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.2ms | Allocations: 10258)
+
+
