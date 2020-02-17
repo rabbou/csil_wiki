@@ -1,20 +1,114 @@
-<div class="topnav">
-  <a href="welcome">Home</a>
+<!DOCTYPE HTML>
+<html>
 
-  <% if logged_in? %>
-    <a href="meisterdoms">Meisterdoms</a>
-    <a href="webcheckout">WebCheckout</a>
-  <%end%>
+<% if logged_in? %>
+    <%= button_to "Logout", '/logout', method: :get%>
+<head>
+  <title>CSIL Wiki</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="assets/application.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1 color='black'>WEBSITE</h1>
+          <h2><em>Manage the CSIL Website, which runs on the Apache 2 web server, and is written in HTML/CSS.</em></h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you are on -->
+          <li></li>
+          <li class="selected">&nbsp<a href="Testing">Home</a><br></li>
+          <li><div class="dropdown">
+            <button class="dropbtn">Meisterdoms</button>
+            <div class="dropdown-content">
+              &nbsp<a href="ActivityMonitoring">Activity Monitoring</a><br>
+              &nbsp<a href="Backups">Backups</a><br>
+              &nbsp<a href="Imaging">Imaging</a><br>
+              &nbsp<a href="Inventory">Inventory</a><br>
+              &nbsp<a href="Kiosk">Kiosk</a><br>
+              &nbsp<a href="LoginsSecurity">Logins & Security</a><br>
+              &nbsp<a href="Printing">Printing</a><br>
+              &nbsp<a href="Scheduling">Scheduling/Cleaning </a><br>
+              &nbsp<a href="Servers">Servers</a><br>
+              &nbsp<a href="Training">Training</a><br>
+              &nbsp<a href="Webint">Web-int</a><br>
+              &nbsp<a href="Website">Website</a><br>
+              &nbsp<a href="Testing">Testing</a><br>
+              </div>
+            </div></li>
+          <li><a href="page.html">General Issues</a></li>
+          <li><a href="another_page.html">Tutorial Videos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        <ul>
+          <li><a href="#">TBD</a></li>
+        </ul>
+        <!-- <h3>Search</h3>
+        <form method="post" action="#" id="search_form">
+          <p>
+            <input class="search" type="text" name="search_field" value="Enter keywords....." />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
+          </p>
+        </form> -->
+      </div>
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1><b>Welcome to Website!</b></h1>
+        <h4><i>Current tutors:</i></h4>
+        <p>Angela, Abdo.</p>
+        <p>The <i><a href="https://csil.cs.uchicago.edu">CSIL Website</a></i> runs on the Apache 2 web server, a Debian 7.0 virtual machine, and has its data files stored in the website repository that exists on the our Gitlab. Pages were written in HTML/CSS using the <i><a href="https://getbootstrap.com">Bootstrap</a></i> framework, and then converted to Markdown and compiled using Pandoc. Compilation is done using the Makefile, which can be found in the root directory of the website repository. The website currently does not require PHP (yay).</p>
+        <!-- DEV NOTE: This <i><a href="https://pandoc.org">Pandoc</a></i> should go in for Pandoc but it makes the text on here orange and I dont know why and it bothers me too much so im just gonna leave it here!! -->
+        <p>The CSIL website has many systems supporting it, but you likely won’t need to know the nitty-gritty details if you are just making small updates for maintenance. </p>
+        <!-- <button type="button" class="collapsible">WebCheckout</button> -->
+        <!-- <div class="content"> -->
+          <h2><b>Updating and Testing the Website:</b></h2>
+            <p>After visiting the website’s Gitlab repository, you can either 1) clone the repository and make local changes via Git or 2) browse to the file on Gitlab and click the “edit” button and save. Please make sure to always work within the <code>testing</code> branch, deployed at raikou.cs.uchicago.edu, before pushing any changes to the master branch. Changes are automatically deployed live on the site within a few minutes. If changes are not showing up within that time frame, refresh your browser a few times to clear your caches or use Incognito.</p>
+          <h2><b>Plugins and APIs: </b></h2>
+            <p>The <i><a href="https://cloud.google.com/maps-platform/">GoogleMaps API</a></i> was used to configure the map on the visit page. You can edit the map parameters (zoom, location, etc) under <code>js/gmap.js</code>. The scrolling animation was built with the <i><a href="https://www.delac.io/wow/">WOW.js</a></i> plugin and <i><a href="https://daneden.github.io/animate.css/">Animate.css</a></i>.</p>
+              <ul>
+               <li>To add a new animation on scroll just set the jquery class <code>wow</code> and choose an animate class from <code>animate.css</code>.</li>
+               <li>Most icons are pulled from <i><a href="https://fontawesome.com/icons?d=gallery">Font Awesome</a></i>, and a few are vectors.</li>
+               <li>The homepage slideshow was built using the <i><a href="https://revolution.themepunch.com/jquery/">Slider Revolution</a></i> jQuery plugin—all slides are in <code>img/slider</code>. To ensure clearly visible navbar text, use photoshop dark overlay on each slider image.</li>
+              </ul>
+          <h2><b>Website Includes:</b></h2>
+           <ul>
+            <li><b>Application List: </b>appList.txt contains the list of software that show up on the <i><a href="https://csil.cs.uchicago.edu/applist.html">Available Software</a></i> page. As of now, this list must be updated manually (but feel free to write a script that does it automatically!).</li>
+            <li><b>Lab Schedule: </b>The new reservation system uses a new VM called <code>reservations-vl1</code>. This server scrapes Google Calendar for events periodically, parses it, and runs scp on the output file <code>reservations-gcal.json</code>, which replaces the existing file in the website server, where <code>reservations.json</code> is a permanent symlink to <code>reservations-gcal.json</code>. Please take a look at the kiosk reservation documentation (coming soon) for more info on the system. </li>
+          </ul>
+          <h2><b>Configuring a New Web Server:</b></h2>
+           <p>The Apache configuration file is in <code>/etc/apache2/sites-available/csil</code>. In particular, the following lines are important if reconfiguring a new web server:</p>
+           <pre><code>        &ltDirectory /var/www/csil-website&gt
+            Options Indexes FollowSymLinks MultiViews +IncludesNOEXEC
+            ...
+            DirectoryIndex index.shtml
+        &lt/Directory&gt</code></pre></p>
+        <p>Note that the <code>+IncludesNOEXEC</code> option enables server-side includes, which cuts down the amount of duplication of HTML in the website.
+        <h2><b>Questions?</b></h2>
+        <p>Want to get involved in the website meisterdom? Have questions about maintenance? Feel free to reach out to any of the website meisters—Angela L. or Abdo A.</p> 
+        </div>
+      </div>
+    </div>
+    </div>
+    <%end%>
 
   <% if not_logged_in? %>
     <%= button_to "Login", '/login', method: :get%>
-    <%= button_to "Sign Up", '/users', method: :get%>
-     <meta http-equiv="Refresh" content="0; url=https://3000-ad5d64ce-7d1c-477b-8c2c-cccc97921172.ws-us02.gitpod.io/" />
-  <%end%>
-</div>
 
-  <h1 align="center" style="border:2px solid red">Website</h1>
-  <h2 align="left">Introduction to Website</h2>
-  <p> Some information here. </p>
+  <!--  <%= button_to "Sign Up", '/users', method: :get%> -->
+  <%end%>
   
-  <%= button_to "Logout", '/logout', method: :get%>
+</body>
+</html>
