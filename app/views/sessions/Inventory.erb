@@ -1,20 +1,123 @@
-<div class="topnav">
-  <a href="welcome">Home</a>
+<!DOCTYPE HTML>
+<html>
 
-  <% if logged_in? %>
-    <a href="meisterdoms">Meisterdoms</a>
-    <a href="webcheckout">WebCheckout</a>
-  <%end%>
+<% if logged_in? %>
+    <%= button_to "Logout", '/logout', method: :get%>
+<head>
+  <title>CSIL Wiki</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="assets/application.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1 color='black'> INVENTORY </h1>
+          <h2><em>Manage the physical harware inventory and inventory database. Maintain WebCheckout and basement storage.</em></h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you are on -->
+          <li></li>
+          <li class="selected">&nbsp<a href="Testing">Home</a><br></li>
+          <li><div class="dropdown">
+            <button class="dropbtn">Meisterdoms</button>
+            <div class="dropdown-content">
+              &nbsp<a href="ActivityMonitoring">Activity Monitoring</a><br>
+              &nbsp<a href="Backups">Backups</a><br>
+              &nbsp<a href="Imaging">Imaging</a><br>
+              &nbsp<a href="Inventory">Inventory</a><br>
+              &nbsp<a href="Kiosk">Kiosk</a><br>
+              &nbsp<a href="LoginsSecurity">Logins & Security</a><br>
+              &nbsp<a href="Printing">Printing</a><br>
+              &nbsp<a href="Scheduling">Scheduling/Cleaning </a><br>
+              &nbsp<a href="Servers">Servers</a><br>
+              &nbsp<a href="Training">Training</a><br>
+              &nbsp<a href="Webint">Web-int</a><br>
+              &nbsp<a href="Website">Website</a><br>
+              &nbsp<a href="Testing">Testing</a><br>
+              </div>
+            </div></li>
+          <li><a href="page.html">General Issues</a></li>
+          <li><a href="another_page.html">Tutorial Videos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        <!-- <h3></h3>
+        <h4>New Website Launched</h4>
+        <h5>July 1st, 2014</h5>
+        <p>2014 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
+        <p></p>
+        <h4>New Website Launched</h4>
+        <h5>July 1st, 2014</h5>
+        <p>2014 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
+        <h3>Useful Links</h3> -->
+        <ul>
+          <li><a href="#">TBD</a></li>
+        </ul>
+        <!-- <h3>Search</h3>
+        <form method="post" action="#" id="search_form">
+          <p>
+            <input class="search" type="text" name="search_field" value="Enter keywords....." />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
+          </p>
+        </form> -->
+      </div>
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1><b>Welcome to Inventory!</b></h1>
+        <h4><i>Current tutors:</i></h4>
+        <p>Jeremy, Ruben, Josh, Jason, Ilan, Dawson.</p>
+        <p>The inventory meisters first and foremost job is to manage the physical hardware inventory and the inventory database. The database is currently merging to a new platform, but it stores vital statistics and information about all of the hardware in the lab, including computers, keyboards, monitors, chargers, etc. Because the inventory keeps track of hardware worth hundreds of thousands of dollars, it is imperative that the inventory is up to date. </p>
+        <p>Inventory meisters are also responsible for managing the WebCheckout inventory kept behind the desk. When new chargers and hardware are bought to be checked out to the users of the lab, inventory meisters must add the new equipment to the desk, label it correctly, and add it in WebCheckout[link to item] and in the InFlow[link to item] database. </p>
+        <!-- <button type="button" class="collapsible">WebCheckout</button> -->
+        <!-- <div class="content"> -->
+          <h2><b>WebCheckout:</b></h2>
+            <p>WebCheckout is the platform we use for checking out chargers, adaptors, and other cables to regular users of the lab. Webcheckout is used in conjunction with MADD center, so please do not mess with their inventory so they don’t mess with ours. Below are some helpful pages for managing WebCheckout inventory. </p>
+              <ul>
+                <li><b>Directions: </b>All items are to be checked back in by users by 15 minutes before closing of the lab on the same day. Users should under no circumstances leave the lab with the item they have checked out. Any tutor on duty should mention this before checking out an item.</li>
+                <li><b>Checking Out Items: </b> When you are checking out items, always ask the user to spell out his or her CNET ID to you so you can search in the “People” tab. Click on the person’s name to bring up his/her page. Click “New Checkout” on the bottom of the left panel.
+                  <ul>
+                    <li>If scanning is available, scan item, select return time, commit and enter your pin. </li>
+                    <li>Click on MADD CSIL and then the respective category. Double click the item to select it then set the return time of that night (it isn’t that by default). Finally, click commit and type your PIN to finish the transaction.</li>
+                  </ul>
+                </li>
+                <li><b>Adding New Items: </b> Under the “Resources” tab, click on “Find Equipment”. Then on the left panel, type “MADD CSIL” in the box and select the correct category from the menu when it pops up. Click “Find” Click on the piece of equipment that is most similar to what you are trying to add to bring up its page. Click on the “Admin” tab on the item and click “Duplicate this resource”. Type in the new name for the item following the naming convention of all the CSIL items. Click “continue” to finish adding the item.</li>
+                <li><b>Deleting Resources: </b> Deleting resources is only allowed if the item is broken or we have discontinued it from being checked out. Deleting a resource can also be done in the “admin” page of the item similar to adding new items.</li>
+                <li><b>Adding a New Type: </b> Adding a new type is for when there is a new category of items that are being added to WebCheckout. For example, if we wanted to add the ability for users to checkout disc drives, then a new type would have to be created. First, navigate to the “MADD CSIL” resource type homepage. Then, click the “Admin” tab. Click “Create a new subtype of this type” and follow the instructions to create a new category of items.</li>
+              </ul>
+          <h2><b>Full Hardware Inventory: </b></h2>
+            <p>We are moving off the old inventory platform and are currently testing new replacements. Once we have decided on a platform and the proper conventions for managing the inventory, we will update this page. (note: if you are reading this and it has not been updated, tell a Wiki meister!)</p>
+              <ul>
+               <li><b>Barcodes</b></li>
+               <li><b>Adding Items</b></li>
+               <li><b>Scanning Items</b></li>
+              </ul>
+          <h2><b>Basement Storage:</b></h2>
+           <p>Although the basement storage is technically open for any CSIL tutor, it is the inventory meisters’ job to keep the basement organized and track the locations of items in the server room and basement storage.</p>
+          <h2><b>Selling Old Inventory:</b></h2>
+           <p>When it comes time to sell the old machines to other departments in the University, it is the job of the inventory meisters to track those transactions and make sure to keep in close contact with Cosmos. Since we have not yet decided on a platform for full hardware inventory, the precise steps to be taken will be updated later.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <%end%>
 
   <% if not_logged_in? %>
     <%= button_to "Login", '/login', method: :get%>
-    <%= button_to "Sign Up", '/users', method: :get%>
-     <meta http-equiv="Refresh" content="0; url=https://3000-ad5d64ce-7d1c-477b-8c2c-cccc97921172.ws-us02.gitpod.io/" />
-  <%end%>
-</div>
 
-  <h1 align="center" style="border:2px solid red">Inventory</h1>
-  <h2 align="left">Introduction to Inventory</h2>
-  <p> Some information here. </p>
+  <!--  <%= button_to "Sign Up", '/users', method: :get%> -->
+  <%end%>
   
-  <%= button_to "Logout", '/logout', method: :get%>
+</body>
+</html>
