@@ -1,20 +1,87 @@
-<div class="topnav">
-  <a href="welcome">Home</a>
+<!DOCTYPE HTML>
+<html>
 
-  <% if logged_in? %>
-    <a href="meisterdoms">Meisterdoms</a>
-    <a href="webcheckout">WebCheckout</a>
-  <%end%>
+<% if logged_in? %>
+    <%= button_to "Logout", '/logout', method: :get%>
+<head>
+  <title>CSIL Wiki</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="assets/application.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1 color='black'> Meisterdom Name </h1>
+          <h2><em>Brief Statement about what the meisterdom mainly does.</em></h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you are on -->
+          <li></li>
+          <li class="selected">&nbsp<a href="Testing">Home</a><br></li>
+          <li><div class="dropdown">
+            <button class="dropbtn">Meisterdoms</button>
+            <div class="dropdown-content">
+              &nbsp<a href="ActivityMonitoring">Activity Monitoring</a><br>
+              &nbsp<a href="Backups">Backups</a><br>
+              &nbsp<a href="Imaging">Imaging</a><br>
+              &nbsp<a href="Inventory">Inventory</a><br>
+              &nbsp<a href="Kiosk">Kiosk</a><br>
+              &nbsp<a href="LoginsSecurity">Logins & Security</a><br>
+              &nbsp<a href="Printing">Printing</a><br>
+              &nbsp<a href="Scheduling">Scheduling/Cleaning </a><br>
+              &nbsp<a href="Servers">Servers</a><br>
+              &nbsp<a href="Training">Training</a><br>
+              &nbsp<a href="Webint">Web-int</a><br>
+              &nbsp<a href="Website">Website</a><br>
+              &nbsp<a href="Testing">Testing</a><br>
+              </div>
+            </div></li>
+          <li><a href="page.html">General Issues</a></li>
+          <li><a href="another_page.html">Tutorial Videos</a></li>
+          <li><a href="contact.html">Contact </a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        <ul>
+          <li><a href="#">TBD</a></li>
+        </ul>
+        <!-- <h3>Search</h3>
+        <form method="post" action="#" id="search_form">
+          <p>
+            <input class="search" type="text" name="search_field" value="Enter keywords....." />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
+          </p>
+        </form> -->
+      </div> 
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1>Welcome to Meisterdom!</h1>
+        <h2>Current tutors:</h2>
+        <ul>
+          <li>Name them here.</li>
+        </ul>
+        <p>Longer statement about what the meisterdom mostly does. </p>
+      </div>
+    </div>
+    </div>
+    <%end%>
 
   <% if not_logged_in? %>
     <%= button_to "Login", '/login', method: :get%>
-    <%= button_to "Sign Up", '/users', method: :get%>
-     <meta http-equiv="Refresh" content="0; url=https://3000-ad5d64ce-7d1c-477b-8c2c-cccc97921172.ws-us02.gitpod.io/" />
-  <%end%>
-</div>
 
-  <h1 align="center" style="border:2px solid red">Wiki</h1>
-  <h2 align="left">Introduction to Wiki</h2>
-  <p> Some information here. </p>
+  <!--  <%= button_to "Sign Up", '/users', method: :get%> -->
+  <%end%>
   
-  <%= button_to "Logout", '/logout', method: :get%>
+</body>
+</html>
