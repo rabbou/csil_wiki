@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+
+<% if logged_in? %>
+    <%= button_to "Logout", '/logout', method: :get%>
+<head>
+  <title>CSIL Wiki</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="assets/application.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1 color='black'> LOGINS AND SECURITY </h1>
+          <h2><em>Provide proper login scripts for LDAP and AD logins. Monitor security updates for all our servers and machine farm. Be alert to new vulnerabilities and changes in security requirements. Handle authentication certificates and SSH logins.</em></h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you are on -->
+          <li></li>
+          <li class="selected">&nbsp<a href="Testing">Home</a><br></li>
+          <li><div class="dropdown">
+            <button class="dropbtn">Meisterdoms</button>
+            <div class="dropdown-content">
+              &nbsp<a href="ActivityMonitoring">Activity Monitoring</a><br>
+              &nbsp<a href="Backups">Backups</a><br>
+              &nbsp<a href="Imaging">Imaging</a><br>
+              &nbsp<a href="Inventory">Inventory</a><br>
+              &nbsp<a href="Kiosk">Kiosk</a><br>
+              &nbsp<a href="LoginsSecurity">Logins & Security</a><br>
+              &nbsp<a href="Printing">Printing</a><br>
+              &nbsp<a href="Scheduling">Scheduling/Cleaning </a><br>
+              &nbsp<a href="Servers">Servers</a><br>
+              &nbsp<a href="Training">Training</a><br>
+              &nbsp<a href="Webint">Web-int</a><br>
+              &nbsp<a href="Website">Website</a><br>
+              &nbsp<a href="Testing">Testing</a><br>
+              </div>
+            </div></li>
+          <li><a href="page.html">General Issues</a></li>
+          <li><a href="another_page.html">Tutorial Videos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        <ul>
+          <li><a href="#">TBD</a></li>
+        </ul>
+        <!-- <h3>Search</h3>
+        <form method="post" action="#" id="search_form">
+          <p>
+            <input class="search" type="text" name="search_field" value="Enter keywords....." />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
+          </p>
+        </form> -->
+      </div>
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1>Welcome to Logins and Security.</h1>
+        <h2>Current tutors:</h2>
+        <ul>
+          <li>Emily, Katherine, Yves</li>
+        </ul>
+        <p>Responsibilities:
+        <ul>
+          <li>Ensure all machines are properly configured for LDAP (active directory login) so users are able to log in with their CNET IDs</li>
+          <li>Keep passwords up to date using 1Password and maintain any required SSH keys</li>
+          <li>Update/patch internal servers/software in the case of well-known vulnerabilities</li>
+          <li>Ensure that tutors have administrative privilege on the mac machines</li>
+        </ul>
+        </p>
+        <button type="button" class="collapsible">Active Directory</button>
+        <div class="content">
+          <h2>Active Directory:</h2>
+            <p>UChicago CNET logins are managed through an LDAP server. In order to manage these session do the following: 
+              <ul>
+                <li>Open Remote Desktop Connection on OS X, or RDP on Ubuntu, and connect to the host godfather.cs.uchicago.edu. Next, use the username and password of the AD OUA account (begins with _oua-), making sure to set the login domain to ad, i.e. ad\_oua-. After that, search for ActiveDirectory Users and Groups, and click through to dc=adlocal, PSD, CS, CSIL. There should be several human accounts, as well as another OU for the Computers of the CSIL.
+                </li>
+                <li>All accounts beginning with _oua- are administrators and can reset each other's passwords. To do so, right click on an account and choose Reset Password.
+                </li>
+              </ul>
+            </p>
+        </div>
+        
+        <button type="button" class="collapsible">1Password</button>
+          <div class="content">
+            <h2>1Password:</h2>
+              <p>This is an online password binder. This stores most of the password you’ll need to use as a CSIL tutor, unless you’re trying to uncover something more obscure in our system (trust me it really is obscure). You should've received an invite from Cosmos to access this.</p>
+          </div>
+        
+        <button type="button" class="collapsible">Mac admin access</button>
+          <div class="content">
+            <h2>Mac admin access:</h2>
+              <p>Tutors can SSH into any of the macs with their CNET IDs and enjoy admin privilege. This is enabled through a task in the rev The task adds their CNET to the admin group. This only works if Active Directory has been setup (through csil-config-ad) Note that tutors must append their name to the <a href=https://repo-vl1.cs.uchicago.edu/csil/ansible-farm/blob/master/roles/users-setup/defaults/main.yml>list</a> in order to gain admin access.</p>
+          </div>
+        
+      </div>
+    </div>
+    </div>
+    <%end%>
+
+  <% if not_logged_in? %>
+    <%= button_to "Login", '/login', method: :get%>
+
+  <!--  <%= button_to "Sign Up", '/users', method: :get%> -->
+  <%end%>
+  
+</body>
+</html>
