@@ -66,8 +66,8 @@
       </div>
       <div id="content">
         <!-- insert the page content here -->
-        <h1>Welcome to Logins and Security.</h1>
-        <h2>Current tutors:</h2>
+        <h1>Welcome to Logins and Security!</h1>
+        <h4><i>Current tutors:</i></h4>
         <ul>
           <li>Emily, Katherine, Yves</li>
         </ul>
@@ -81,7 +81,6 @@
         </p>
         <button type="button" class="collapsible">Active Directory</button>
         <div class="content">
-          <h2>Active Directory:</h2>
             <p>UChicago CNET logins are managed through an LDAP server. In order to manage these session do the following: 
               <ul>
                 <li>Open Remote Desktop Connection on OS X, or RDP on Ubuntu, and connect to the host godfather.cs.uchicago.edu. Next, use the username and password of the AD OUA account (begins with _oua-), making sure to set the login domain to ad, i.e. ad\_oua-. After that, search for ActiveDirectory Users and Groups, and click through to dc=adlocal, PSD, CS, CSIL. There should be several human accounts, as well as another OU for the Computers of the CSIL.
@@ -94,16 +93,28 @@
         
         <button type="button" class="collapsible">1Password</button>
           <div class="content">
-            <h2>1Password:</h2>
               <p>This is an online password binder. This stores most of the password you’ll need to use as a CSIL tutor, unless you’re trying to uncover something more obscure in our system (trust me it really is obscure). You should've received an invite from Cosmos to access this.</p>
           </div>
         
-        <button type="button" class="collapsible">Mac admin access</button>
+        <button type="button" class="collapsible">Mac Admin Access</button>
           <div class="content">
-            <h2>Mac admin access:</h2>
               <p>Tutors can SSH into any of the macs with their CNET IDs and enjoy admin privilege. This is enabled through a task in the rev The task adds their CNET to the admin group. This only works if Active Directory has been setup (through csil-config-ad) Note that tutors must append their name to the <a href=https://repo-vl1.cs.uchicago.edu/csil/ansible-farm/blob/master/roles/users-setup/defaults/main.yml>list</a> in order to gain admin access.</p>
           </div>
-        
+        <script>
+          var coll = document.getElementsByClassName("collapsible");
+          var i;
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+                });
+              }
+              </script>
       </div>
     </div>
     </div>

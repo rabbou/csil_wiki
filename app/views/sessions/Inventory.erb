@@ -68,12 +68,13 @@
         <!-- insert the page content here -->
         <h1><b>Welcome to Inventory!</b></h1>
         <h4><i>Current tutors:</i></h4>
-        <p>Jeremy, Ruben, Josh, Jason, Ilan, Dawson.</p>
+        <ul>
+          <li>Jeremy, Ruben, Josh, Jason, Ilan, Dawson.</li>
+        </ul>
         <p>The inventory meisters first and foremost job is to manage the physical hardware inventory and the inventory database. The database is currently merging to a new platform, but it stores vital statistics and information about all of the hardware in the lab, including computers, keyboards, monitors, chargers, etc. Because the inventory keeps track of hardware worth hundreds of thousands of dollars, it is imperative that the inventory is up to date. </p>
         <p>Inventory meisters are also responsible for managing the WebCheckout inventory kept behind the desk. When new chargers and hardware are bought to be checked out to the users of the lab, inventory meisters must add the new equipment to the desk, label it correctly, and add it in WebCheckout[link to item] and in the InFlow[link to item] database. </p>
-        <!-- <button type="button" class="collapsible">WebCheckout</button> -->
-        <!-- <div class="content"> -->
-          <h2><b>WebCheckout:</b></h2>
+        <button type="button" class="collapsible">WebCheckout</button>
+        <div class="content">
             <p>WebCheckout is the platform we use for checking out chargers, adaptors, and other cables to regular users of the lab. Webcheckout is used in conjunction with MADD center, so please do not mess with their inventory so they don’t mess with ours. Below are some helpful pages for managing WebCheckout inventory. </p>
               <ul>
                 <li><b>Directions: </b>All items are to be checked back in by users by 15 minutes before closing of the lab on the same day. Users should under no circumstances leave the lab with the item they have checked out. Any tutor on duty should mention this before checking out an item.</li>
@@ -87,20 +88,41 @@
                 <li><b>Deleting Resources: </b> Deleting resources is only allowed if the item is broken or we have discontinued it from being checked out. Deleting a resource can also be done in the “admin” page of the item similar to adding new items.</li>
                 <li><b>Adding a New Type: </b> Adding a new type is for when there is a new category of items that are being added to WebCheckout. For example, if we wanted to add the ability for users to checkout disc drives, then a new type would have to be created. First, navigate to the “MADD CSIL” resource type homepage. Then, click the “Admin” tab. Click “Create a new subtype of this type” and follow the instructions to create a new category of items.</li>
               </ul>
-          <h2><b>Full Hardware Inventory: </b></h2>
+            </div>
+        <button type="button" class="collapsible">Full Hardware Inventory</button>
+        <div class="content">
             <p>We are moving off the old inventory platform and are currently testing new replacements. Once we have decided on a platform and the proper conventions for managing the inventory, we will update this page. (note: if you are reading this and it has not been updated, tell a Wiki meister!)</p>
               <ul>
                <li><b>Barcodes</b></li>
                <li><b>Adding Items</b></li>
                <li><b>Scanning Items</b></li>
               </ul>
-          <h2><b>Basement Storage:</b></h2>
+            </div>
+        <button type="button" class="collapsible">Basement Storage</button>
+        <div class="content">
            <p>Although the basement storage is technically open for any CSIL tutor, it is the inventory meisters’ job to keep the basement organized and track the locations of items in the server room and basement storage.</p>
-          <h2><b>Selling Old Inventory:</b></h2>
+          </div>
+        <button type="button" class="collapsible">Selling Old Inventory</button>
+        <div class="content">
            <p>When it comes time to sell the old machines to other departments in the University, it is the job of the inventory meisters to track those transactions and make sure to keep in close contact with Cosmos. Since we have not yet decided on a platform for full hardware inventory, the precise steps to be taken will be updated later.</p>
+        <script>
+          var coll = document.getElementsByClassName("collapsible");
+          var i;
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+                });
+              }
+              </script>
+           </div>
         </div>
       </div>
-    </div>
     </div>
     <%end%>
 

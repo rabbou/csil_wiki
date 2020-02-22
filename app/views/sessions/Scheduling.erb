@@ -67,35 +67,50 @@
       <div id="content">
         <!-- insert the page content here -->
         <h1>Welcome to Scheduling/Cleaning.</h1>
-        <h2>Current tutors:</h2>
+        <h4><i>Current tutors:</i></h4>
         <ul>
           <li>Ronald, Juni, Benjamin</li>
         </ul>
         <p>This meisterdom involves creating and maintaining the tutor work schedule and cleaning schedule each quarter.</p>
         <button type="button" class="collapsible">Creating the Tutor Schedule</button>
         <div class="content">
-          <h2>Adding a New User:</h2>
-            <p>Go to https://webint-vl1.cs.uchicago.edu/admin/, to add a new user to WebInt, first add them by their CNET ID under /Whitelisted users/ and select tutor group (note: if someone is getting a message that they can’t view the schedule, then they likely were not added to the tutor group). </p>
-            <p>Next, under "Schedule profiles", add a profile for the user and set a background color (hex code), set the text color to 000000.</p>
-            <p>Add recurring shifts for this user profile.  (time is always in 24hr, and the days are numbered Sunday=0 Monday=1 etc.)</p>
-          <h2>General Practices:</h2>
-            <p>Schedule surveys go out before 1st week, before 2nd week, and before finals. </p>
-            <p>Priority for shift schedule is given by grade. </p>
-            <p>Tutors are scheduled for about 10 hours a week unless otherwise specified.</p>
+          <h4>Adding a New User:</h4>
+          <ul>
+            <li>Go to https://webint-vl1.cs.uchicago.edu/admin/, to add a new user to WebInt, first add them by their CNET ID under /Whitelisted users/ and select tutor group (note: if someone is getting a message that they can’t view the schedule, then they likely were not added to the tutor group). </li>
+            <li>Next, under "Schedule profiles", add a profile for the user and set a background color (hex code), set the text color to 000000.</li>
+            <li>Add recurring shifts for this user profile.  (time is always in 24hr, and the days are numbered Sunday=0 Monday=1 etc.)</li>
+          <h4>General Practices:</h4>
+          <ul>
+            <li>Schedule surveys go out before 1st week, before 2nd week, and before finals. </li>
+            <li>Priority for shift schedule is given by grade. </li>
+            <li>Tutors are scheduled for about 10 hours a week unless otherwise specified.</li>
         </div>
         
         <button type="button" class="collapsible">Creating the Cleaning Schedule</button>
           <div class="content">
-            <h2>Cleaning Schedule:</h2>
               <p>This is top secret, ask Ronald if you have questions. JK we are creating a new system for managing the cleaning schedule soon.</p>
           </div>
         
         <button type="button" class="collapsible">Covers</button>
           <div class="content">
-            <h2>Adding and Removing a Covers:</h2>
+            <h4>Adding and Removing a Cover:</h4>
               <p>To add a cover, click the 'Covers' text towards the top of the screen. Then, click on the shift that you will be covering for. A prompt will appear that asks for the name of the tutor that is doing the covering and the start and end times for the cover. The format of this time should be HH:MM where HH is out of 24 hours. So, a cover from 11:00 AM to 1:00 PM would be entered as 11:00 to 13:00. To remove a cover, click on the cover shift that you added and click the 'Remove' button. </p>
           </div>
-        
+        <script>
+          var coll = document.getElementsByClassName("collapsible");
+          var i;
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+                });
+              }
+              </script>
       </div>
     </div>
     </div>

@@ -66,34 +66,45 @@
       </div>
       <div id="content">
         <!-- insert the page content here -->
-        <h1>Welcome to Activity Monitoring.</h1>
-        <h2>Current tutors:</h2>
+        <h1>Welcome to Activity Monitoring!</h1>
+        <h4><i>Current tutors:</i></h4>
         <ul>
           <li>Yves, Dawson</li>
         </ul>
         <p>This meisterdom involves tracking usage and user activity, usually for the statistics and security. We also provide graphical illustrations and API endpoints to demonstrate the captured data. There are three main activity monitoring tools we actively use and support: labstats, rsyslog and Prometheus. </p>
         <button type="button" class="collapsible">Labstats</button>
         <div class="content">
-          <h2>Labstats:</h2>
             <p>Labstats is responsible for tracking CSIL usage, especially each users login sessions. In general, this is done through login hooks that makes API calls to our Django REST API. This is currently being revamped. </p>
         </div>
         
         <button type="button" class="collapsible">Rsyslog</button>
           <div class="content">
-            <h2>Rsyslog:</h2>
               <p>Placeholder for now…</p>
           </div>
         
         <button type="button" class="collapsible">Prometheus</button>
           <div class="content">
-            <h2>Prometheus:</h2>
               <p>Prometheus is responsible for monitoring the health of CSIL machines and servers. In general, prometheus-dl1 scrapes metrics exposed by node-exporter on various machines, and stores them in a database. This database is then connected to Grafana, for visualization purposes. </p>
           </div>
-        
-      </div>
-    </div>
-    </div>
-    <%end%>
+          <script>
+          var coll = document.getElementsByClassName("collapsible");
+          var i;
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+                });
+              }
+              </script>
+            </div>
+           </div>
+          </div>
+        <%end%>
 
   <% if not_logged_in? %>
     <%= button_to "Login", '/login', method: :get%>
