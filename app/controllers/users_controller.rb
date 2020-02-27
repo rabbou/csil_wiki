@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 
     render({ :template => "users/show.html.erb" })
   end
-
+r
   def create
     @user = User.new
     @user.email = params.fetch("email_from_query")
