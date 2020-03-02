@@ -4775,3 +4775,175 @@ Started GET "/packs/js/application-25c7ed018ad99dee4acb.js" for ::1 at 2020-03-0
   
 ActionController::RoutingError (No route matches [GET] "/packs/js/application-25c7ed018ad99dee4acb.js"):
   
+Started GET "/" for ::1 at 2020-03-02 19:31:41 +0000
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 26.6ms | Allocations: 13380)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 107ms (Views: 97.2ms | ActiveRecord: 1.3ms | Allocations: 37162)
+
+
+Started GET "/packs/js/application-25c7ed018ad99dee4acb.js" for ::1 at 2020-03-02 19:31:41 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-25c7ed018ad99dee4acb.js"):
+  
+Started GET "/ActivityMonitoring" for ::1 at 2020-03-02 19:31:47 +0000
+Processing by SessionsController#ActivityMonitoring as HTML
+  Rendering sessions/ActivityMonitoring.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/markdown/_ActivityMonitoring.html.md (Duration: 0.3ms | Allocations: 75)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/ActivityMonitoring.html.erb within layouts/application (Duration: 7.1ms | Allocations: 4462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.3ms | Allocations: 11015)
+
+
+Started GET "/packs/js/application-25c7ed018ad99dee4acb.js" for ::1 at 2020-03-02 19:31:47 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-25c7ed018ad99dee4acb.js"):
+  
+Started GET "/Testing" for ::1 at 2020-03-02 19:31:50 +0000
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 17.0ms | Allocations: 5160)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.3ms | Allocations: 11573)
+
+
+Started GET "/packs/js/application-25c7ed018ad99dee4acb.js" for ::1 at 2020-03-02 19:31:50 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-25c7ed018ad99dee4acb.js"):
+  
+Started GET "/logout" for ::1 at 2020-03-02 19:31:51 +0000
+Processing by SessionsController#logout as HTML
+Redirected to https://3000-fd564651-c255-4cc8-843a-fc0abe844704.ws-us02.gitpod.io/welcome
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 1692)
+
+
+Started GET "/welcome" for ::1 at 2020-03-02 19:31:51 +0000
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 21.6ms | Allocations: 5282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.4ms | Allocations: 11710)
+
+
+Started GET "/packs/js/application-25c7ed018ad99dee4acb.js" for ::1 at 2020-03-02 19:31:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-25c7ed018ad99dee4acb.js"):
+  
+Started GET "/welcome" for ::1 at 2020-03-02 19:32:05 +0000
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 7.8ms | Allocations: 5588)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.3ms | Allocations: 13159)
+
+
+Started GET "/packs/js/application-25c7ed018ad99dee4acb.js" for ::1 at 2020-03-02 19:32:05 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-25c7ed018ad99dee4acb.js"):
+  
+Started GET "/welcome" for ::1 at 2020-03-02 19:32:27 +0000
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 8.7ms | Allocations: 5567)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.2ms | Allocations: 13118)
+
+
+Started GET "/packs/js/application-25c7ed018ad99dee4acb.js" for ::1 at 2020-03-02 19:32:27 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-25c7ed018ad99dee4acb.js"):
+  
+Started GET "/login" for ::1 at 2020-03-02 19:32:28 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 115)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 6653)
+
+
+Started GET "/packs/js/application-25c7ed018ad99dee4acb.js" for ::1 at 2020-03-02 19:32:28 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-25c7ed018ad99dee4acb.js"):
+  
+Started POST "/login" for ::1 at 2020-03-02 19:32:29 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"email_from_query"=>"traclin@uchicago.edu", "password_from_query"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "traclin@uchicago.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to https://3000-fd564651-c255-4cc8-843a-fc0abe844704.ws-us02.gitpod.io/welcome
+Completed 302 Found in 296ms (ActiveRecord: 0.5ms | Allocations: 3600)
+
+
+Started GET "/welcome" for ::1 at 2020-03-02 19:32:29 +0000
+Processing by SessionsController#templatePage as HTML
+  Rendering sessions/templatePage.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/templatePage.html.erb within layouts/application (Duration: 7.5ms | Allocations: 5154)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 66.9ms | ActiveRecord: 0.2ms | Allocations: 11611)
+
+
+Started GET "/packs/js/application-25c7ed018ad99dee4acb.js" for ::1 at 2020-03-02 19:32:29 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-25c7ed018ad99dee4acb.js"):
+  
+Started GET "/ActivityMonitoring" for ::1 at 2020-03-02 19:32:31 +0000
+Processing by SessionsController#ActivityMonitoring as HTML
+  Rendering sessions/ActivityMonitoring.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/markdown/_ActivityMonitoring.html.md (Duration: 0.3ms | Allocations: 75)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+  Rendered sessions/ActivityMonitoring.html.erb within layouts/application (Duration: 6.6ms | Allocations: 4437)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.2ms | Allocations: 10980)
+
+
+Started GET "/packs/js/application-25c7ed018ad99dee4acb.js" for ::1 at 2020-03-02 19:32:31 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-25c7ed018ad99dee4acb.js"):
+  
