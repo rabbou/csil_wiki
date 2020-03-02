@@ -47,6 +47,7 @@
           <li><a href="page.html">General Issues</a></li>
           <li><a href="another_page.html">Tutorial Videos</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://github.com/tylerraclin/csil_wiki">Edit</a></li>
         </ul>
       </div>
     </div>
@@ -71,6 +72,9 @@
         <ul>
           <li>Yves, Dawson</li>
         </ul>
+        <div class="help">
+          <%= render :partial => "sessions/markdown/ActivityMonitoring" %>
+        </div>
         <p>This meisterdom involves tracking usage and user activity, usually for the statistics and security. We also provide graphical illustrations and API endpoints to demonstrate the captured data. There are three main activity monitoring tools we actively use and support: labstats, rsyslog and Prometheus. </p>
         <button type="button" class="collapsible">Labstats</button>
         <div class="content">
