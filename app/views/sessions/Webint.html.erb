@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+
+<% if logged_in? %>
+    <%= button_to "Logout", '/logout', method: :get%>
+<head>
+  <title>CSIL Wiki</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="assets/application.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1 color='black'> WEB-INT</h1>
+          <h2><em>Maintain (currently rewriting) the internal website used by tutors.</em></h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you are on -->
+          <li></li>
+          <li class="selected">&nbsp<a href="Testing">Home</a><br></li>
+          <li><div class="dropdown">
+            <button class="dropbtn">Meisterdoms</button>
+            <div class="dropdown-content">
+              &nbsp<a href="ActivityMonitoring">Activity Monitoring</a><br>
+              &nbsp<a href="Backups">Backups</a><br>
+              &nbsp<a href="Imaging">Imaging</a><br>
+              &nbsp<a href="Inventory">Inventory</a><br>
+              &nbsp<a href="Kiosk">Kiosk</a><br>
+              &nbsp<a href="LoginsSecurity">Logins & Security</a><br>
+              &nbsp<a href="Printing">Printing</a><br>
+              &nbsp<a href="Scheduling">Scheduling/Cleaning </a><br>
+              &nbsp<a href="Servers">Servers</a><br>
+              &nbsp<a href="Training">Training</a><br>
+              &nbsp<a href="Webint">Web-int</a><br>
+              &nbsp<a href="Website">Website</a><br>
+              &nbsp<a href="Testing">Testing</a><br>
+              </div>
+            </div></li>
+          <li><a href="page.html">General Issues</a></li>
+          <li><a href="another_page.html">Tutorial Videos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://github.com/tylerraclin/csil_wiki/tree/master/app/views/sessions/markdown">Edit</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        <ul>
+          <li><a href="#">TBD</a></li>
+        </ul>
+        <!-- <h3>Search</h3>
+        <form method="post" action="#" id="search_form">
+          <p>
+            <input class="search" type="text" name="search_field" value="Enter keywords....." />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
+          </p>
+        </form> -->
+      </div> 
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1>Welcome to Web-Int!</h1>
+        <h4><i>Current tutors:</i></h4>
+        <ul>
+          <li>Yves, Katherine, Dawson, Tony, Zal, Grace, Johnny, Lily, Matthias.</li>
+        </ul>
+        <div class="help">
+          <%= render :partial => "sessions/markdown/Webint" %>
+        </div>
+        <!-- <p>Web-int or webint is short for Web Internal and vovers all of our software that is designated for internal use. This page contains information about software on webint and the development of this software. Webint has 5 major domains: webint (administrative), schedule, labstats, inventory, and kiosks. </p>
+        <button type="button" class="collapsible">Administrative Interface</button>
+        <div class="content">
+            <p>One of the most important aspects of webint is the <i><a href="https://webint-vl1.cs.uchicago.edu/admin/">administrative interface</a></i>. The username and password should be in the password binder and OnePass. Here you can see all the internal models used by webint and edit them as necessary. More details about specific fields can be found in the subsections dealing with those applications.</p>
+        </div>
+        <button type="button" class="collapsible">User Authentication</button>
+        <div class="content">
+            <p>Web-int uses ldap authentication, so tutors should be able to login with just their cnet/password combination. However, we are also using a whitelist to control access to various parts of the site. If a user is not on the whitelist, they will receive 403 errors for any page they are not authorized to view. To add a user to the whitelist, first navigate to the administrator interface (see above), and select “Whitelisted users”. Create a new whitelisted user and add set the name to the users cnet id. Then select the privileges that the user should have. Tutors: Can access every page on the site (with the exception of the wiki). Wikiusers: Can access the wiki. Any tutors should belong to the groups “tutors” and “wikiusers”.</p>
+        </div>
+        <button type="button" class="collapsible">Schedule</button>
+        <div class="content">
+            <p>See Scheduling Meisterdom in the dropdown above.</p>
+        </div>
+        <button type="button" class="collapsible">Labstats</button>
+        <div class="content">
+            <p>Labstats in a Django based system that tracks the usage of the machines present in the lab and allows us to examine usage trends and notice any potentially malicious behavior.</p>
+            <ul>
+             <li>See Activity Monitoring Meisterdom in the dropdown above.</li>
+             <li>The State of Labstats as of 2016: A relatively comprehensive review of Labstats written by a now retired tutor. Provides a good overview of labstats functionality and its codebase and serves as a good springboard for further research. See <i><a href="https://repo-vl1.cs.uchicago.edu/csil/csil-wiki/blob/master/pages/Activity_Monitoring/labstats_tour.md">here</a></i> for more information.</li>
+            </ul>
+        </div>
+        <button type="button" class="collapsible">Kiosks</button>
+        <div class="content">
+            <p>Kiosk is a system that generates rotating slides for display in a web browser. Slides may (currently) be webpages, images, or QuickTime movies. It is used to run the information displays at the southern end of the lab and by the tutor station. See Kiosk in the dropdown above for more information.</p>
+        </div>
+        <button type="button" class="collapsible">Developing Web-int</button>
+        <div class="content">
+            <p>Web-int is built in Django. To develop in web-int, read through the Django documentation on writing your first Django app carefully, as it give you a good overview of the framework that we use. Next, use the "Getting Started" page to set up a local copy of web-int and spend some time exploring the code base. Once you have a good gist of where things are, you are ready to work on Webint!</p>
+            <ul>
+             <li>RIP repo-we will figure this out later.</li>
+            </ul>
+        </div>
+        <button type="button" class="collapsible">Web-int 1.0</button>
+        <div class="content">
+            <p>This page details all the workings of web-int 1.0 in general. This includes how to log into webint, how to use the administrative interface, and other miscellaneous topics.</p>
+            <ul>
+             <li>Restarting Web-int 1.0: Web-int can be restarted by sshing into webint-vl1 and running ```sudo supervisorctl restart webint```</li>
+            </ul>
+        </div>
+        <script>
+          var coll = document.getElementsByClassName("collapsible");
+          var i;
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+                });
+              }
+              
+        </script>
+        -->
+      </div>
+    </div>
+    </div>
+    <%end%>
+
+  <% if not_logged_in? %>
+    <%= button_to "Login", '/login', method: :get%>
+
+  <!--  <%= button_to "Sign Up", '/users', method: :get%> -->
+  <%end%>
+  
+</body>
+</html>
